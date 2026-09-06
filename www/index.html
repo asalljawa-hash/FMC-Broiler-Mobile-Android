@@ -1,0 +1,2076 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>FMC BOILER MOBILE V11</title>
+
+<meta name="theme-color"
+content="#0B8F43">
+
+<meta name="apple-mobile-web-app-capable"
+content="yes">
+
+<meta name="apple-mobile-web-app-status-bar-style"
+content="default">
+
+<meta name="apple-mobile-web-app-title"
+content="FMC">
+
+<link rel="manifest"
+href="manifest.json">
+
+<link rel="icon"
+href="icons/icon-192.png">
+
+<link rel="apple-touch-icon"
+href="icons/icon-192.png">
+
+<!-- Google Font -->
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,1,0"
+rel="stylesheet">
+
+<link rel="stylesheet" href="css/login.css">
+<link rel="stylesheet" href="css/register.css">
+<link rel="stylesheet" href="css/forgot.css">
+<link rel="stylesheet" href="css/navigation.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/masterKontrak.css">
+<link rel="stylesheet" href="css/Ovk.css">
+  
+<!-- CSS -->
+
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/dark.css">
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/card.css">
+<link rel="stylesheet" href="css/table.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/share.css">
+<link rel="stylesheet" href="css/rhpp.css">
+<link rel="stylesheet" href="css/setting.css">
+<link rel="stylesheet" href="css/premium.css">
+<link rel="stylesheet" href="css/docin.css">
+<link rel="stylesheet" href="css/pakan.css">
+<link rel="stylesheet" href="css/operasional.css">
+<link rel="stylesheet" href="css/inputflok.css">
+<link rel="stylesheet" href="css/plan-panen.css">
+<link rel="stylesheet" href="css/realisasi-panen.css">
+</head>
+
+<body id="appBody">
+  
+<!-- ======================================
+SPLASH SCREEN V11
+====================================== -->
+
+<div id="splash">
+
+<img
+src="icons/splash.png"
+class="splashLogo"
+alt="FMC Logo">
+
+<h1>
+
+FMC BROILER
+
+</h1>
+
+<p>
+
+Farm Management Control System
+
+</p>
+
+<div class="loadingBox">
+
+<div class="loadingFill"></div>
+
+</div>
+
+<div class="loadingText">
+
+Menyiapkan Dashboard...
+
+</div>
+
+</div>
+
+<!-- ======================================
+LOGIN PAGE
+====================================== -->
+
+<section id="loginPage">
+
+    <div class="loginContainer">
+
+        <img
+            src="icons/logo.png"
+            class="loginLogo"
+            alt="FMC Logo">
+
+        <h1>FMC BROILER</h1>
+
+        <p class="loginSub">
+            Farm Management Control System
+        </p>
+
+        <div id="serverStatus" class="serverStatus">
+
+    <span class="dot"></span>
+
+    <div class="statusText">
+
+        <span>Memeriksa Server...</span>
+
+    </div>
+
+</div>
+
+        <!-- LOGIN FORM -->
+
+        <form
+            id="loginForm"
+            autocomplete="off">
+
+            <label for="loginEmail">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="loginEmail"
+                name="email"
+                autocomplete="email"
+                maxlength="100"
+                placeholder="Masukkan Email"
+                required>
+
+            <label for="loginPin">
+                PIN
+            </label>
+
+            <input
+                type="password"
+                id="loginPin"
+                name="pin"
+                inputmode="numeric"
+                maxlength="6"
+                autocomplete="current-password"
+                placeholder="Masukkan PIN 6 Digit"
+                required>
+
+            <!-- FORGOT PIN -->
+
+            <div class="forgotPinBox">
+
+                <a
+                    href="#"
+                    id="btnForgotPin"
+                    onclick="showForgotPin(); return false;">
+
+                    <span class="material-symbols-rounded">
+                        lock_reset
+                    </span>
+
+                    Lupa PIN?
+
+                </a>
+
+            </div>
+
+            <!-- LOGIN MESSAGE -->
+
+            <div
+                id="loginMessage"
+                class="loginMessage"
+                style="display:none;">
+            </div>
+
+            <button
+                type="button"
+                id="btnLogin"
+                class="loginBtn">
+
+                <span class="material-symbols-rounded">
+                    login
+                </span>
+
+                MASUK KE FMC
+
+            </button>
+
+        </form>
+
+        <div class="registerBox">
+
+            Belum punya akun?
+
+            <a
+                href="#"
+                id="btnDaftar"
+                onclick="showRegister(); return false;">
+
+                Daftar
+
+            </a>
+
+        </div>
+
+        <div class="loginVersion">
+
+            Version 1.0 • Secure Login
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================
+REGISTER PAGE
+====================================== -->
+
+<section id="registerPage" style="display:none;">
+
+    <div class="registerContainer">
+
+        <img
+            src="icons/logo.png"
+            class="registerLogo"
+            alt="FMC Logo">
+
+        <h1>Buat Akun</h1>
+
+        <p class="registerSub">
+            Silakan lengkapi data di bawah untuk membuat akun
+            <strong>FMC Broiler Mobile</strong>.
+        </p>
+
+<!-- ======================================
+REGISTER FORM
+====================================== -->
+
+<form id="registerForm" autocomplete="off">
+
+    <label for="regName">Nama Lengkap</label>
+    <input
+        type="text"
+        id="regName"
+        name="fullName"
+        autocomplete="name"
+        maxlength="100"
+        placeholder="Contoh: Budi Santoso"
+        required>
+
+    <label for="regEmail">Email</label>
+    <input
+        type="email"
+        id="regEmail"
+        name="email"
+        autocomplete="email"
+        maxlength="100"
+        placeholder="Contoh: budi@email.com"
+        required>
+
+    <label for="regPhone">Nomor HP (WhatsApp Aktif)</label>
+    <input
+        type="tel"
+        id="regPhone"
+        name="phone"
+        autocomplete="tel"
+        inputmode="numeric"
+        maxlength="15"
+        placeholder="Contoh: 081234567890"
+        required>
+
+    <label for="regCompany">Nama Perusahaan / Farm</label>
+    <input
+        type="text"
+        id="regCompany"
+        name="company"
+        autocomplete="organization"
+        maxlength="100"
+        placeholder="Contoh: CV Maju Jaya Farm"
+        required>
+
+    <label for="regAddress">Alamat</label>
+    <textarea
+        id="regAddress"
+        name="address"
+        rows="3"
+        maxlength="255"
+        autocomplete="street-address"
+        placeholder="Masukkan alamat lengkap"
+        required></textarea>
+
+    <label for="regProvince">Provinsi</label>
+    <select
+        id="regProvince"
+        name="province"
+        required>
+
+        <option value="">Pilih Provinsi</option>
+
+    </select>
+
+    <label for="regCity">Kota / Kabupaten</label>
+    <select
+        id="regCity"
+        name="city"
+        required>
+
+        <option value="">Pilih Kota / Kabupaten</option>
+
+    </select>
+
+    <label for="regBusiness">Jenis Usaha</label>
+    <select
+        id="regBusiness"
+        name="business"
+        required>
+
+        <option value="">Pilih Jenis Usaha</option>
+        <option value="broiler">Broiler</option>
+        <option value="layer">Layer</option>
+        <option value="breeding">Breeding</option>
+
+    </select>
+
+    <label for="regCage">Jumlah Flok</label>
+    <input
+      type="number"
+      id="regCage"
+      name="cage"
+      inputmode="numeric"
+      min="1"
+      max="6"
+      step="1"
+      placeholder="Jumlah Flok" (1–6)"
+      required>
+
+    <label for="regPin">PIN (6 Digit)</label>
+    <input
+        type="password"
+        id="regPin"
+        name="pin"
+        maxlength="6"
+        inputmode="numeric"
+        autocomplete="new-password"
+        placeholder="******"
+        required>
+
+    <label for="regConfirmPin">Konfirmasi PIN</label>
+    <input
+        type="password"
+        id="regConfirmPin"
+        name="confirmPin"
+        maxlength="6"
+        inputmode="numeric"
+        autocomplete="new-password"
+        placeholder="******"
+        required>
+
+    <label class="agreeBox">
+
+        <input
+            type="checkbox"
+            id="agree"
+            required>
+
+        <span>
+            Saya menyetujui
+            <a href="#" id="termsLink">Syarat &amp; Ketentuan</a>
+            serta
+            <a href="#" id="privacyLink">Kebijakan Privasi</a>.
+        </span>
+
+    </label>
+
+    <button
+        type="submit"
+        id="btnRegister"
+        class="registerBtn">
+
+        DAFTAR SEKARANG
+
+    </button>
+
+    <div
+        id="registerMessage"
+        class="registerMessage"
+        style="display:none;">
+    </div>
+
+    <div class="registerLoginBox">
+
+        Sudah punya akun?
+        <a
+            href="#"
+            id="btnMasuk"
+            onclick="showLogin(); return false;">
+
+            Masuk
+
+        </a>
+
+    </div>
+
+    <div class="registerVersion">
+
+        Version 1.0 • Register Account
+
+    </div>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- ======================================
+FORGOT PIN PAGE
+====================================== -->
+
+<section id="forgotPage" style="display:none;">
+
+    <div class="loginContainer">
+
+        <img
+            src="icons/logo.png"
+            class="loginLogo"
+            alt="FMC Logo">
+
+        <h1>FMC BROILER</h1>
+
+        <p class="loginSub">
+            Farm Management Control System
+        </p>
+
+        <div class="serverStatus">
+
+            <span class="material-symbols-rounded">
+                lock_reset
+            </span>
+
+            Reset PIN
+
+        </div>
+
+        <form
+            id="forgotForm"
+            autocomplete="off">
+
+            <!-- EMAIL -->
+
+            <label for="resetEmail">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="resetEmail"
+                autocomplete="email"
+                maxlength="100"
+                placeholder="Masukkan Email"
+                required>
+
+            <!-- AREA OTP -->
+
+            <div
+                id="otpArea"
+                style="display:none;">
+
+                <label for="resetOTP">
+                    Kode OTP
+                </label>
+
+                <input
+                    type="text"
+                    id="resetOTP"
+                    maxlength="6"
+                    inputmode="numeric"
+                    placeholder="Masukkan Kode OTP">
+
+                <label for="resetPIN">
+                    PIN Baru
+                </label>
+
+                <input
+                    type="password"
+                    id="resetPIN"
+                    maxlength="6"
+                    inputmode="numeric"
+                    placeholder="Masukkan PIN Baru">
+
+                <label for="resetConfirmPIN">
+                    Konfirmasi PIN
+                </label>
+
+                <input
+                    type="password"
+                    id="resetConfirmPIN"
+                    maxlength="6"
+                    inputmode="numeric"
+                    placeholder="Ulangi PIN Baru">
+
+            </div>
+
+            <!-- MESSAGE -->
+
+            <div
+                id="forgotMessage"
+                class="loginMessage"
+                style="display:none;">
+            </div>
+
+            <!-- STEP 1 -->
+
+            <button
+                type="button"
+                id="btnSendResetOTP"
+                class="loginBtn">
+
+                <span class="material-symbols-rounded">
+                    mail
+                </span>
+
+                KIRIM OTP
+
+            </button>
+
+            <!-- STEP 2 -->
+
+            <button
+                type="button"
+                id="btnResetPIN"
+                class="loginBtn"
+                style="display:none;">
+
+                <span class="material-symbols-rounded">
+                    lock_reset
+                </span>
+
+                SIMPAN PIN
+
+            </button>
+
+        </form>
+
+        <div class="registerBox">
+
+            Sudah ingat PIN?
+
+            <a
+                href="#"
+                onclick="closeForgotPin(); return false;">
+
+                Login
+
+            </a>
+
+        </div>
+
+        <div class="loginVersion">
+
+            Version 1.0 • Secure Reset
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================
+APP FMC
+====================================== -->
+
+<div id="app" style="display:none;">
+  
+<!-- ======================================
+HEADER V11
+====================================== -->
+
+<header class="header">
+
+<div class="headerBrand">
+
+<button
+    id="fmcMenuButton"
+    class="fmcMenuButton"
+    type="button"
+    onclick="toggleFmcSidebar()"
+    aria-label="Buka menu">
+
+    <span class="material-symbols-rounded">
+        menu
+    </span>
+
+</button>
+
+<img
+src="icons/icon-192.png"
+class="headerLogo"
+alt="FMC Logo">
+
+<div class="headerTop">
+
+<h2 id="farmNama">
+
+FMC BOILER MOBILE
+
+</h2>
+
+<div class="headerSub">
+
+Farm Management Control System
+
+</div>
+
+<div id="updateTime">
+
+Sinkronisasi...
+
+</div>
+
+</div>
+
+</div>
+
+<div class="headerAction">
+
+<div
+id="statusServer">
+
+<span class="material-symbols-rounded">
+
+cloud_done
+
+</span>
+
+ONLINE
+
+</div>
+
+<button
+id="installBtn"
+onclick="installApp()"
+style="display:none;">
+
+<span class="material-symbols-rounded">
+
+download
+
+</span>
+
+</button>
+
+</div>
+
+</header>
+<!-- =================================================
+     FMC SIDEBAR
+================================================= -->
+
+<div
+    id="fmcSidebarOverlay">
+</div>
+
+
+<aside
+    id="fmcSidebar"
+    aria-label="Menu FMC">
+
+
+    <!-- HEADER -->
+
+    <div class="sidebarHeader">
+
+        <div class="sidebarHeaderTop">
+
+            <div class="sidebarBrand">
+
+                <img
+                    src="icons/icon-192.png"
+                    class="sidebarLogo"
+                    alt="FMC">
+
+                <div
+                    class="sidebarBrandText">
+
+                    <div
+                        class="sidebarTitle">
+
+                        FMC BROILER
+
+                    </div>
+
+                    <div
+                        id="sidebarFarmNama"
+                        class="sidebarFarm">
+
+                        FMC
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="sidebarClose"
+                onclick="closeFmcSidebar()"
+                aria-label="Tutup menu">
+
+                <span class="material-symbols-rounded">
+                    close
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- MENU -->
+
+    <div class="sidebarMenu">
+
+
+        <!-- DASHBOARD -->
+
+<button
+    type="button"
+    class="sidebarItem active"
+    onclick="sidebarGo('dashboard')">
+
+    <span class="material-symbols-rounded">
+        space_dashboard
+    </span>
+
+    <span>
+        Dashboard
+    </span>
+
+</button>
+
+
+        <!-- INPUT DATA -->
+
+        <div
+            class="sidebarSectionTitle">
+
+            INPUT DATA
+
+        </div>
+
+
+<button
+    type="button"
+    class="sidebarItem"
+    onclick="sidebarGo('docin')">
+
+    <span class="material-symbols-rounded">
+        description
+    </span>
+
+    <span>
+        DOC In
+    </span>
+
+</button>
+
+
+<button
+    type="button"
+    class="sidebarItem"
+    onclick="sidebarGo('pakan')">
+
+    <span class="fmc-corn-emoji" aria-hidden="true">🌽</span>
+
+    <span>
+        Pakan
+    </span>
+
+</button>
+
+<button
+    type="button"
+    class="sidebarItem"
+    onclick="sidebarGo('operasional')">
+
+    <span class="material-symbols-rounded">
+        payments
+    </span>
+
+    <span>
+        Operasional
+    </span>
+
+</button>
+
+
+<!-- =====================================================
+     MENU FLOK
+     
+     Tombol FLOK langsung membuka halaman INPUT FLOK.
+     
+     Daftar FLOK tidak lagi dibuat statis di sidebar.
+     Jumlah FLOK mengikuti konfigurasi tenant pada sistem.
+     
+     Tidak ada submenu A / B / C / D di sidebar.
+===================================================== -->
+
+<div
+    id="sidebarFlok"
+    class="sidebarFlok">
+
+
+    <!-- =================================================
+         TOMBOL FLOK
+         Langsung membuka halaman INPUT FLOK.
+    ================================================== -->
+
+<div
+    id="sidebarFlok"
+    class="sidebarFlok">
+
+    <button
+        type="button"
+        class="sidebarItem"
+        onclick="sidebarGo('inputflok')">
+
+        <span class="material-symbols-rounded">
+            home
+        </span>
+
+        <span>
+            Flok
+        </span>
+
+    </button>
+
+</div>
+  
+<!-- MASTER DATA -->
+
+<div class="sidebarSectionTitle">
+    MASTER DATA
+</div>
+
+
+<!-- MASTER KONTRAK -->
+
+<button
+    type="button"
+    class="sidebarItem"
+    onclick="sidebarGo('masterKontrak')">
+
+    <span class="material-symbols-rounded contractIcon">
+        handshake
+    </span>
+
+    <span>
+        Master Kontrak
+    </span>
+
+</button>
+
+
+<!-- OVK -->
+
+<button
+    type="button"
+    class="sidebarItem"
+    onclick="sidebarGo('ovk')">
+
+    <span class="material-symbols-rounded">
+        medication
+    </span>
+
+    <span>
+        OVK
+    </span>
+
+</button>
+
+<!-- PLAN & REALISASI -->
+
+<button
+    type="button"
+    class="sidebarItem"
+    onclick="sidebarComingSoon('planpanen')">
+
+    <span class="material-symbols-rounded">
+        event
+    </span>
+
+    <span>
+        Plan Panen
+    </span>
+
+</button>
+
+
+<button
+    type="button"
+    class="sidebarItem"
+    onclick="sidebarComingSoon('timbang')">
+
+    <span class="material-symbols-rounded">
+        scale
+    </span>
+
+    <span>
+        Data Timbang
+    </span>
+
+</button>
+
+
+<button
+    type="button"
+    class="sidebarItem"
+    onclick="sidebarComingSoon('realisasipanen')">
+
+    <span class="material-symbols-rounded">
+        local_shipping
+    </span>
+
+    <span>
+        Realisasi Panen
+    </span>
+
+</button>
+
+
+<!-- HISTORY -->
+
+<button
+    type="button"
+    class="sidebarItem"
+    onclick="sidebarComingSoon('History')">
+
+    <span class="material-symbols-rounded">
+        history
+    </span>
+
+    <span>
+        History
+    </span>
+
+</button>
+
+
+<!-- RESET APLIKASI -->
+
+<button
+    type="button"
+    class="sidebarItem"
+    onclick="sidebarGo('Reset Aplikasi')">
+
+    <span class="material-symbols-rounded">
+        restart_alt
+    </span>
+
+    <span>
+        Reset Aplikasi
+    </span>
+
+</button>
+
+
+<!-- FOOTER -->
+
+<div class="sidebarFooter">
+
+    <div class="sidebarDivider"></div>
+
+
+<!-- PENGATURAN -->
+
+<button
+    type="button"
+    class="sidebarItem"
+    onclick="closeFmcSidebar(); toggleSettingPanel()">
+
+    <span class="material-symbols-rounded">
+        settings
+    </span>
+
+    <span>
+        Pengaturan
+    </span>
+
+</button>
+
+
+<!-- KELUAR -->
+
+<button
+    type="button"
+    class="sidebarItem"
+    onclick="closeFmcSidebar(); exitFMC()">
+
+    <span class="material-symbols-rounded">
+        logout
+    </span>
+
+    <span>
+        Keluar
+    </span>
+
+</button>
+
+</div>
+
+
+</aside>
+<!-- ======================================
+DASHBOARD
+====================================== -->
+
+<section id="dashboardPage">
+
+<div class="card">
+
+<h2>
+
+<span class="material-symbols-rounded">
+
+dashboard
+
+</span>
+
+Memuat Dashboard...
+
+</h2>
+
+<p>
+
+Synchronizing server data...
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ======================================
+FLOK
+====================================== -->
+
+<section
+id="flokPage"
+style="display:none;">
+
+<div class="card">
+
+<h2>
+
+<span class="material-symbols-rounded">
+pets
+</span>
+
+Memuat Data Flok...
+
+</h2>
+
+<p>
+
+Mengambil data produksi...
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ======================================
+     DOC IN
+====================================== -->
+
+<section
+    id="docinPage"
+    style="display:none;">
+
+    <div class="card">
+
+        <h2>
+
+            <span class="material-symbols-rounded">
+                description
+            </span>
+
+            DOC In
+
+        </h2>
+
+        <p>
+            Form DOC In akan digunakan untuk memasukkan
+            data awal periode dan populasi setiap flok.
+        </p>
+
+    </div>
+
+</section>
+
+  <!-- ======================================
+     PAKAN
+====================================== -->
+
+<section
+    id="pakanPage"
+    style="display:none;">
+
+    <div class="card">
+
+        <h2>
+
+            <span class="material-symbols-rounded">
+                local_shipping
+            </span>
+
+            Pakan
+
+        </h2>
+
+        <p>
+            Manajemen stok dan penerimaan pakan.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ======================================
+     OPERASIONAL
+====================================== -->
+
+<section
+    id="operasionalPage"
+    style="display:none;">
+
+</section>
+
+
+<!-- ======================================
+     MASTER KONTRAK
+====================================== -->
+
+<section
+    id="masterKontrakPage"
+    style="display:none;">
+
+</section>
+
+  <!-- ======================================
+     OVK
+====================================== -->
+
+<section
+    id="ovkPage"
+    style="display:none;">
+
+</section>
+
+<!-- ======================================
+     PLAN PANEN
+====================================== -->
+
+<section
+    id="planpanenPage"
+    style="display:none;">
+
+</section>
+  
+<!-- ======================================
+     REALISASI PANEN
+====================================== -->
+
+<section
+    id="realisasiPanenPage"
+    style="display:none;">
+</section>
+  
+<!-- ======================================
+     INPUT FLOK
+====================================== -->
+
+<section
+    id="inputFlokPage"
+    style="display:none;">
+</section>
+
+<!-- ======================================
+     RESET APLIKASI
+====================================== -->
+<section
+    id="resetaplikasiPage"
+    style="display:none;">
+</section>
+  
+<!-- ======================================
+HARIAN
+====================================== -->
+
+<section
+id="harianPage"
+style="display:none;">
+
+<div class="card">
+
+<h2>
+
+<span class="material-symbols-rounded">
+
+calendar_month
+
+</span>
+
+Memuat Data Harian...
+
+</h2>
+
+<p>
+
+Menghubungkan laporan harian...
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ======================================
+KEUANGAN
+====================================== -->
+
+<section
+id="keuanganPage"
+style="display:none;">
+
+<div class="card">
+
+<h2>
+
+<span class="material-symbols-rounded">
+
+payments
+
+</span>
+
+Memuat Data Keuangan...
+
+</h2>
+
+<p>
+
+Mengambil ringkasan produksi...
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ======================================
+RHPP
+====================================== -->
+
+<section
+id="rhppPage"
+style="display:none;">
+
+    <div class="card">
+
+        <h2>
+
+            <span class="material-symbols-rounded">
+                description
+            </span>
+
+            Memuat RHPP...
+
+        </h2>
+
+        <p>
+
+            Menyiapkan Ringkasan Hasil Produksi...
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ======================================
+AI
+====================================== -->
+
+<section
+id="aiPage"
+style="display:none;">
+
+<div class="card">
+
+<h2>
+
+<span class="material-symbols-rounded">
+
+smart_toy
+
+</span>
+
+FMC AI Advisor
+
+</h2>
+
+<p>
+
+Menyiapkan analisis cerdas...
+
+</p>
+
+</div>
+
+</section>
+
+</main>
+
+<!-- ======================================
+UPDATE TOAST
+====================================== -->
+
+<div id="updateToast">
+
+📢 Data harian peternakan telah diperbarui
+
+</div>
+
+<!-- ======================================
+SETTING PANEL
+====================================== -->
+
+<div id="settingPanel">
+
+    <div class="panelHandle"></div>
+
+<h2>
+
+    Panel Kontrol FMC
+
+</h2>
+
+<!-- MODE MOBILE -->
+
+<div class="settingItem" onclick="setMobileMode()">
+
+    <span class="material-symbols-rounded">
+        phone_android
+    </span>
+
+    <span style="flex:1;">
+        Mode Mobile
+    </span>
+
+    <span id="mobileCheck"
+    class="material-symbols-rounded">
+
+        check_circle
+
+    </span>
+
+</div>
+
+<!-- MODE DESKTOP -->
+
+<div class="settingItem" onclick="setDesktopMode()">
+
+    <span class="material-symbols-rounded">
+        desktop_windows
+    </span>
+
+    <span style="flex:1;">
+        Mode Desktop
+    </span>
+
+    <span id="desktopCheck"
+    class="material-symbols-rounded">
+
+        check_circle
+
+    </span>
+
+</div>
+
+<!-- TEMA GELAP -->
+
+<div class="settingItem" onclick="toggleDarkMode()">
+
+    <span class="material-symbols-rounded">
+        dark_mode
+    </span>
+
+    <span style="flex:1;">
+        Tema Gelap
+    </span>
+
+    <span id="darkModeCheck"
+    class="material-symbols-rounded">
+
+        check_circle
+
+    </span>
+
+</div>
+
+<!-- RHPP PDF -->
+
+<div class="settingItem" onclick="openRHPP()">
+
+    <span class="material-symbols-rounded">
+        description
+    </span>
+
+    <span style="flex:1;">
+        RHPP PDF
+    </span>
+
+    <span class="material-symbols-rounded">
+        chevron_right
+    </span>
+
+</div>
+
+<!-- BERSIHKAN CACHE -->
+
+<div class="settingItem" onclick="clearCache()">
+
+    <span class="material-symbols-rounded">
+        cleaning_services
+    </span>
+
+    <span style="flex:1;">
+        Bersihkan Cache
+    </span>
+
+</div>
+
+<!-- REFRESH DATA -->
+
+<div class="settingItem" onclick="refreshData()">
+
+    <span class="material-symbols-rounded">
+        refresh
+    </span>
+
+    <span style="flex:1;">
+        Refresh Data
+    </span>
+
+</div>
+
+<hr>
+
+<div class="settingItem" onclick="showAbout()">
+
+    <span class="material-symbols-rounded">
+        info
+    </span>
+
+    <span style="flex:1;">
+        Tentang FMC
+    </span>
+
+    <span class="material-symbols-rounded">
+        chevron_right
+    </span>
+
+</div>
+
+<hr>
+
+<div class="settingItem" onclick="exitFMC()">
+
+    <span class="material-symbols-rounded">
+        logout
+    </span>
+
+    <span style="flex:1;">
+        Keluar
+    </span>
+
+</div>
+
+</div>
+
+<nav class="bottomNav">
+
+<button
+id="btnDashboard"
+class="active"
+onclick="showPage('dashboard')">
+
+<span class="material-symbols-rounded">
+
+home
+
+</span>
+
+<span>
+
+Home
+
+</span>
+
+</button>
+
+<button
+id="btnFlok"
+onclick="showPage('flok')">
+
+<span class="material-symbols-rounded">
+
+grid_view
+
+</span>
+
+<span>
+
+Flok
+
+</span>
+
+</button>
+
+<button
+id="btnHarian"
+onclick="showPage('harian')">
+
+<span class="material-symbols-rounded">
+
+calendar_month
+
+</span>
+
+<span>
+
+Harian
+
+</span>
+
+</button>
+
+<button
+id="btnKeuangan"
+onclick="showPage('keuangan')">
+
+<span class="material-symbols-rounded">
+
+account_balance_wallet
+
+</span>
+
+<span>
+
+Keuangan
+
+</span>
+
+</button>
+
+<button
+id="btnAI"
+onclick="showPage('ai')">
+
+<span class="material-symbols-rounded">
+
+psychology
+
+</span>
+
+<span>
+
+AI
+
+</span>
+
+</button>
+
+</nav>
+
+<!-- ======================================
+ABOUT FMC PANEL
+====================================== -->
+
+<div id="aboutPanel">
+
+<div class="panelHandle"></div>
+
+<div class="aboutLogo">
+
+<img
+src="icons/icon-192.png"
+alt="FMC Logo"
+width="72"
+height="72"
+style="
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+">
+
+</div>
+
+<h2>FMC BROILER MOBILE</h2>
+
+<div class="aboutVersion">
+Version 19.1 Professional
+</div>
+
+<div class="aboutBadge">
+Professional Edition
+</div>
+
+<p class="aboutMoto">
+Smart Farming • Smart Decision • Better Productivity
+</p>
+
+<hr>
+
+<h3>Farm Management Control System</h3>
+
+<p class="aboutDesc">
+
+<b>FMC Broiler Mobile</b> merupakan sistem manajemen peternakan broiler yang dirancang untuk membantu peternak mengelola data produksi, memantau performa flok, melakukan analisis usaha, serta menghasilkan laporan secara <b>cepat</b>, <b>akurat</b>, dan <b>real-time</b>.
+
+Seluruh informasi produksi dapat diakses kapan saja dan di mana saja sehingga membantu pengambilan keputusan yang lebih tepat, meningkatkan efisiensi operasional, serta mendukung produktivitas usaha peternakan secara berkelanjutan.
+
+</p>
+
+<hr>
+
+<h3>Informasi Sistem</h3>
+
+<div class="aboutInfo">
+
+<div>
+<b>Platform</b><br>
+Mobile & Web Application
+</div>
+
+<div>
+<b>Sinkronisasi</b><br>
+Cloud Sync
+</div>
+
+<div>
+<b>Keamanan</b><br>
+Secure Data Storage
+</div>
+
+<div>
+<b>Mode</b><br>
+Online
+</div>
+
+<div>
+<b>Versi</b><br>
+19.1 Professional
+</div>
+
+<div>
+<b>Developer</b><br>
+Pregolabc123
+</div>
+
+</div>
+
+<hr>
+
+<h3>Fitur Utama</h3>
+
+<ul class="aboutList">
+
+<li>📊 Dashboard Produksi</li>
+
+<li>🐔 Monitoring Flok</li>
+
+<li>📝 Pencatatan Harian</li>
+
+<li>💰 Analisis Keuangan</li>
+
+<li>📄 Export Laporan PDF</li>
+
+<li>📈 Analisis Produksi</li>
+
+<li>☁️ Sinkronisasi Cloud</li>
+
+<li>🔄 Pembaruan Data</li>
+
+<li>🌙 Dark Mode</li>
+
+<li>📱 Mobile Friendly</li>
+
+</ul>
+
+<hr>
+
+<h3>Tentang FMC</h3>
+
+<p class="aboutDesc">
+
+<b>FMC Broiler Mobile</b> dikembangkan sebagai solusi digital modern untuk membantu peternak broiler dalam mengelola seluruh aktivitas produksi melalui satu aplikasi yang ringan, cepat, dan mudah digunakan.
+
+Mulai dari pencatatan data harian, pemantauan performa flok, analisis keuangan, hingga penyusunan laporan profesional dapat dilakukan secara terintegrasi sehingga peternak memperoleh informasi yang akurat untuk mendukung pengambilan keputusan secara cepat dan berbasis data.
+
+</p>
+
+<hr>
+
+<h3>Keunggulan FMC</h3>
+
+<ul class="aboutList">
+
+<li>✔ Ringan dan cepat digunakan</li>
+
+<li>✔ Dashboard interaktif</li>
+
+<li>✔ Sinkronisasi data otomatis</li>
+
+<li>✔ Laporan PDF profesional</li>
+
+<li>✔ Monitoring produksi secara real-time</li>
+
+<li>✔ Antarmuka sederhana dan mudah dipahami</li>
+
+<li>✔ Dapat digunakan pada berbagai perangkat</li>
+
+<li>✔ Penyimpanan data yang aman</li>
+
+</ul>
+
+<hr>
+
+<h3>Visi FMC</h3>
+
+<p class="aboutDesc">
+
+<i>
+
+"Menjadi platform digital terpercaya yang membantu peternak broiler mengelola usaha secara modern, efisien, dan berbasis data guna meningkatkan produktivitas serta keberlanjutan usaha peternakan."
+
+</i>
+
+</p>
+
+<hr>
+
+<h3>Identitas Aplikasi</h3>
+
+<div class="aboutInfo">
+
+<div>
+<b>Nama</b><br>
+FMC Broiler Mobile
+</div>
+
+<div>
+<b>Versi</b><br>
+19.1 Professional
+</div>
+
+<div>
+<b>Kategori</b><br>
+Farm Management Control System
+</div>
+
+<div>
+<b>Platform</b><br>
+Mobile & Web
+</div>
+
+<div>
+<b>Lisensi</b><br>
+Commercial
+</div>
+
+<div>
+<b>Tahun</b><br>
+2026
+</div>
+
+</div>
+
+<div class="aboutFooter">
+
+© 2026 FMC Broiler Mobile<br>
+
+Developed by <b>Pregolabc123</b><br>
+
+Empowering Modern Poultry Farming<br>
+
+All Rights Reserved
+
+</div>
+
+<button class="aboutClose" onclick="closeAbout()">
+Tutup
+</button>
+
+</div>
+
+<!-- ======================================
+FAB SETTINGS
+====================================== -->
+
+<button id="fabSetting" onclick="toggleSettingPanel()">
+    <span class="material-symbols-rounded">
+        settings
+    </span>
+</button>
+
+<!-- ======================================
+FMC DIALOG
+====================================== -->
+
+<div id="fmcDialog" class="fmcDialog">
+
+    <div class="fmcDialogBox">
+
+        <h2 id="dialogTitle">
+            Konfirmasi
+        </h2>
+
+        <p id="dialogMessage">
+            Pesan dialog
+        </p>
+
+        <div class="dialogButtons">
+
+            <button
+                class="dialogCancel"
+                onclick="closeDialog()">
+
+                Batal
+
+            </button>
+
+            <button
+                id="dialogOk"
+                class="dialogOk">
+
+                OK
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ======================================
+SHARE DIALOG
+====================================== -->
+
+<div id="shareDialog" class="fmcDialog">
+
+    <div class="fmcDialogBox">
+
+        <h2>
+            Bagikan Laporan
+        </h2>
+
+        <p>
+            Pilih cara membagikan laporan FMC.
+        </p>
+
+        <div
+        class="dialogButtons"
+        style="
+        display:flex;
+        flex-direction:column;
+        gap:12px;">
+
+            <button
+            id="btnShareText"
+            class="dialogOk">
+
+                <span class="material-symbols-rounded">
+                    chat
+                </span>
+
+                Share sebagai Teks
+
+            </button>
+
+            <button
+            id="btnShareImage"
+            class="dialogOk">
+
+                <span class="material-symbols-rounded">
+                    picture_as_pdf
+                </span>
+
+                Export PDF
+
+            </button>
+
+            <button
+            class="dialogCancel"
+            onclick="closeShareDialog()">
+
+                <span class="material-symbols-rounded">
+                    close
+                </span>
+
+                Tutup
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ======================================
+SHARE CARD
+====================================== -->
+
+<div id="shareCard" class="shareCard">
+
+    <div class="shareHeader">
+
+        <h2 id="shareTitle">
+            FMC BROILER MOBILE
+        </h2>
+
+        <small id="shareSubtitle">
+            Dashboard
+        </small>
+
+    </div>
+
+    <div id="shareContent">
+
+    </div>
+
+    <div class="shareFooter">
+
+        Powered by FMC Broiler Mobile
+
+    </div>
+
+</div>
+<!-- =================================================
+     JAVASCRIPT
+================================================= -->
+
+<!-- Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
+<!-- API -->
+<script src="js/api.js"></script>
+
+
+<!-- Sidebar -->
+<script src="js/sidebar.js"></script>
+
+
+<!-- Authentication -->
+<script src="js/register.js"></script>
+<script src="js/login.js"></script>
+<script src="js/forgot.js"></script>
+
+
+<!-- Modules -->
+<script src="js/dashboard.js"></script>
+<script src="js/flok.js"></script>
+<script src="js/inputflok.js"></script>
+<script src="js/harian.js"></script>
+<script src="js/docin.js"></script>
+<script src="js/Pakan.js"></script>
+<script src="js/operasional.js"></script>
+<script src="js/masterKontrak.js"></script>
+<script src="js/Ovk.js"></script>
+<script src="js/plan-panen.js"></script>
+<script src="js/realisasi-panen.js"></script>
+<script src="js/keuangan.js"></script>
+<script src="js/rhpp.js"></script>
+<script src="js/rhpp-pdf.js"></script>
+<script src="js/share.js"></script>
+<script src="js/ai.js"></script>
+  
+<script src="js/resetAplikasi.js"></script>
+
+<!-- Core -->
+<script src="js/app.js"></script>
+
+
+<!-- ================================================
+     FMC DEVELOPMENT BOOT
+     HANYA UNTUK LOCALHOST
+================================================ -->
+
+<script>
+
+if (
+    location.hostname === "localhost" ||
+    location.hostname === "127.0.0.1"
+) {
+
+    const devLoginPage =
+        document.getElementById("loginPage");
+
+    const devApp =
+        document.getElementById("app");
+
+
+    if (devLoginPage) {
+
+        devLoginPage.style.display = "none";
+
+    }
+
+
+    if (devApp) {
+
+        devApp.style.display = "block";
+
+    }
+
+
+    console.log(
+        "FMC DEVELOPMENT BOOT AKTIF"
+    );
+
+}
+
+</script>
+
+
+</body>
+</html>

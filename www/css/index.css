@@ -1,0 +1,1869 @@
+/* ==========================================================
+   FMC BROILER MOBILE V11
+   INDEX.CSS
+   BAGIAN 1
+========================================================== */
+
+html,
+body{
+    -webkit-text-size-adjust:100%;
+    text-size-adjust:100%;
+}
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    width:100%;
+    height:100%;
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:'Inter',Arial,Helvetica,sans-serif;
+
+    -webkit-font-smoothing:antialiased;
+
+    -moz-osx-font-smoothing:grayscale;
+
+}
+
+/* =========================
+   SPLASH SCREEN
+========================= */
+
+#splash{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+    linear-gradient(
+        180deg,
+        #063B1D 0%,
+        #0B8F43 45%,
+        #18B85B 100%
+    );
+
+    z-index:99999;
+
+    transition:.7s;
+
+}
+
+#splash.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+}
+
+.splashLogo{
+
+    width:250px;
+
+    max-width:70%;
+
+    object-fit:contain;
+
+    animation:logoFloat 3s ease-in-out infinite;
+
+    filter:drop-shadow(0 8px 18px rgba(0,0,0,.25));
+
+}
+
+#splash h1{
+
+    margin-top:18px;
+
+    font-size:30px;
+
+    font-weight:800;
+
+    color:#fff;
+
+    letter-spacing:.5px;
+
+}
+
+#splash p{
+
+    margin-top:8px;
+
+    color:rgba(255,255,255,.92);
+
+    font-size:14px;
+
+}
+
+.loadingBox{
+
+    margin-top:22px;
+
+    width:280px;
+
+    max-width:80%;
+
+    height:8px;
+
+    background:rgba(255,255,255,.18);
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+}
+
+.loadingFill{
+
+    width:0;
+
+    height:100%;
+
+    background:
+    linear-gradient(
+        90deg,
+        #C7F36A,
+        #57FF8B
+    );
+
+    animation:loadingMove 2s linear infinite;
+
+}
+
+.loadingText{
+
+    margin-top:14px;
+
+    color:#fff;
+
+    font-size:13px;
+
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+#app{
+
+    position:absolute;
+
+    top:78px;
+
+    left:0;
+
+    right:0;
+
+    bottom:74px;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    padding:16px;
+
+    background:var(--bg);
+
+    -webkit-overflow-scrolling:touch;
+
+}
+
+.page{
+
+    animation:fadePage .25s ease;
+
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes logoFloat{
+
+    0%{transform:translateY(0);}
+
+    50%{transform:translateY(-10px);}
+
+    100%{transform:translateY(0);}
+
+}
+
+@keyframes loadingMove{
+
+    from{
+
+        width:0;
+
+    }
+
+    to{
+
+        width:100%;
+
+    }
+
+}
+
+@keyframes fadePage{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(8px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================================
+   FMC BROILER MOBILE V11
+   INDEX.CSS
+   BAGIAN 2
+========================================================== */
+
+/* =========================
+   FORM
+========================= */
+
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:13px 14px;
+
+    border:1px solid #D1D5DB;
+
+    border-radius:14px;
+
+    background:#FFFFFF;
+
+    color:var(--text);
+
+    font-size:14px;
+
+    outline:none;
+
+    transition:.25s;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 3px rgba(11,143,67,.12);
+
+}
+
+button{
+
+    transition:.25s;
+
+    cursor:pointer;
+
+}
+
+button:active{
+
+    transform:scale(.97);
+
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+/* =========================
+   UTILITY
+========================= */
+
+.hidden{
+
+    display:none !important;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-10{
+
+    margin-top:10px;
+
+}
+
+.mt-20{
+
+    margin-top:20px;
+
+}
+
+.mb-10{
+
+    margin-bottom:10px;
+
+}
+
+.mb-20{
+
+    margin-bottom:20px;
+
+}
+
+/* ==========================================
+   APP LAYOUT V12
+========================================== */
+
+#app{
+
+    width:100%;
+
+    max-width:1400px;
+
+    margin:0 auto;
+
+    padding:12px;
+
+    box-sizing:border-box;
+
+}
+
+/* ==========================================
+   HERO DETAIL V13
+========================================== */
+
+.heroSmall{
+
+    font-size:10px;
+
+    font-weight:600;
+
+    letter-spacing:.8px;
+
+    color:rgba(255,255,255,.85);
+
+    margin-bottom:3px;
+
+}
+
+
+.heroDate{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:5px;
+
+    margin-top:4px;
+
+    font-size:12px;
+
+    color:rgba(255,255,255,.92);
+
+}
+
+
+.heroDate .material-symbols-rounded{
+
+    font-size:16px;
+
+}
+
+
+.heroLogo{
+
+    width:44px;
+
+    height:44px;
+
+}
+
+
+.heroLogo .material-symbols-rounded{
+
+    font-size:26px;
+
+}
+
+
+.farmHeader{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:8px;
+
+}
+
+
+}
+
+/* =========================
+   SAFE AREA
+========================= */
+
+@supports(padding:max(0px)){
+
+    #app{
+
+        padding-left:max(8px,env(safe-area-inset-left));
+
+        padding-right:max(8px,env(safe-area-inset-right));
+
+        padding-bottom:max(12px,env(safe-area-inset-bottom));
+
+    }
+
+}
+
+/* ===========================
+   UPDATE TOAST
+=========================== */
+
+#updateToast{
+
+    position:fixed;
+
+    top:-80px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    min-width:280px;
+
+    max-width:90%;
+
+    padding:14px 20px;
+
+    background:#FFC107;
+
+    color:#222;
+
+    border-radius:14px;
+
+    box-shadow:0 8px 24px rgba(0,0,0,.25);
+
+    text-align:center;
+
+    font-weight:700;
+
+    opacity:0;
+
+    transition:.35s ease;
+
+    z-index:99999;
+
+}
+
+#updateToast.show{
+
+    opacity:1;
+
+    top:20px;
+
+    transform:translateX(-50%);
+
+}
+
+/* ==========================================
+   SETTING PANEL V13
+========================================== */
+
+#settingPanel{
+
+    position:fixed;
+
+    left:0;
+
+    right:0;
+
+    bottom:-100%;
+
+    background:#ffffff;
+
+    border-radius:24px 24px 0 0;
+
+    padding:18px;
+
+    max-height:70vh;
+
+    overflow-y:auto;
+
+    padding-bottom:90px;
+
+    box-shadow:0 -8px 30px rgba(0,0,0,.20);
+
+    transition:bottom .35s ease;
+
+    z-index:9999;
+
+}
+
+#settingPanel.show{
+
+    bottom:0;
+
+}
+
+#settingPanel h2{
+
+    margin:10px 0 20px;
+
+    text-align:center;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#222;
+
+}
+
+.settingItem{
+
+    display:flex;
+
+    align-items:center;
+
+    width:100%;
+
+    gap:14px;
+
+    padding:15px 14px;
+
+    margin-bottom:10px;
+
+    border-radius:14px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.2s;
+
+    cursor:pointer;
+
+    box-sizing:border-box;
+
+}
+
+.settingItem:hover{
+
+    background:#F5F7F8;
+
+}
+
+.settingItem:last-child{
+
+    margin-bottom:0;
+
+}
+
+/* ==========================================
+   EXIT MENU
+========================================== */
+
+.settingItem.exitItem{
+
+    color:#D32F2F;
+
+}
+
+.settingItem.exitItem
+.material-symbols-rounded{
+
+    color:#D32F2F;
+
+}
+
+.settingItem.exitItem:active{
+
+    background:#FDECEC;
+
+}
+
+/* ==========================================
+   HANDLE
+========================================== */
+
+.panelHandle{
+
+    width:55px;
+
+    height:5px;
+
+    background:#d9d9d9;
+
+    border-radius:10px;
+
+    margin:0 auto 16px;
+
+}
+
+/* ==========================================
+   MOBILE MODE V12
+========================================== */
+
+body:not(.desktop){
+
+    max-width:100%;
+
+    margin:0;
+
+}
+
+body:not(.desktop) main{
+
+    display:block;
+
+    padding:12px;
+
+}
+
+body:not(.desktop) section{
+
+    width:100%;
+
+}
+
+body:not(.desktop) .card{
+
+    width:100%;
+
+    margin-bottom:16px;
+
+}
+
+body:not(.desktop) .weatherCard{
+
+    width:100%;
+
+    margin-bottom:16px;
+
+}
+
+body:not(.desktop) .header{
+
+    max-width:100%;
+
+}
+
+body:not(.desktop) .bottomNav{
+
+    max-width:100%;
+
+    left:0;
+
+    transform:none;
+
+}
+
+/* ==========================================
+   MODE ACTIVE
+========================================== */
+
+#mobileCheck,
+#desktopCheck{
+
+    color:#0B8F43;
+
+    display:none;
+
+}
+
+.modeActive{
+
+    display:block !important;
+
+}
+
+/* ==========================================
+   DARK MODE V13
+========================================== */
+
+body.dark{
+
+    background:#111827;
+
+    color:#F9FAFB;
+
+}
+
+/* Background */
+
+body.dark #app,
+body.dark main,
+body.dark section{
+
+    background:transparent;
+
+}
+
+/* Header */
+
+body.dark .header{
+
+    background:#1F2937;
+
+    color:#F9FAFB;
+
+}
+
+/* Card */
+
+body.dark .card,
+body.dark .weatherCard,
+body.dark #settingPanel{
+
+    background:#1F2937;
+
+    color:#F9FAFB;
+
+    border:1px solid rgba(255,255,255,.05);
+
+}
+
+/* Judul */
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4{
+
+    color:#FFFFFF;
+
+}
+
+/* Teks */
+
+body.dark p,
+body.dark span,
+body.dark small,
+body.dark label{
+
+    color:#D1D5DB;
+
+}
+
+/* Hover */
+
+body.dark .settingItem:hover{
+
+    background:#374151;
+
+}
+
+/* Bottom Navigation */
+
+body.dark .bottomNav{
+
+    background:#1F2937;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+body.dark .bottomNav button{
+
+    color:#9CA3AF;
+
+}
+
+body.dark .bottomNav button.active{
+
+    color:#22C55E;
+
+}
+
+/* Check Icon */
+
+#darkModeCheck{
+
+    color:#22C55E;
+
+    display:none;
+
+}
+
+.darkActive{
+
+    display:block !important;
+
+}
+
+body.dark .card b{
+
+    color:#FFFFFF;
+
+    font-weight:700;
+
+}
+
+/* ==========================================
+   ABOUT FMC PANEL V14
+========================================== */
+
+#aboutPanel{
+
+    position:fixed;
+
+    left:0;
+
+    right:0;
+
+    bottom:-100%;
+
+    background:#fff;
+
+    border-radius:28px 28px 0 0;
+
+    padding:24px;
+
+    padding-bottom:40px;
+
+    transition:bottom .35s ease;
+
+    z-index:10000;
+
+    box-shadow:
+        0 -12px 40px rgba(0,0,0,.22);
+
+    text-align:center;
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    -webkit-overflow-scrolling:touch;
+
+}
+
+#aboutPanel.show{
+
+    bottom:0;
+
+}
+
+.aboutLogo{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:8px 0 18px;
+
+}
+
+.aboutVersion{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:12px 0;
+
+    padding:7px 18px;
+
+    border-radius:999px;
+
+    background:#0B8F43;
+
+    color:#fff;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:.3px;
+
+}
+
+.aboutDesc{
+
+    margin:18px 0;
+
+    line-height:1.8;
+
+    color:#555;
+
+}
+
+.aboutInfo{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:14px;
+
+    margin:24px 0;
+
+}
+
+.aboutInfo div{
+
+    background:#F7F8FA;
+
+    border:1px solid rgba(0,0,0,.05);
+
+    padding:15px;
+
+    border-radius:16px;
+
+    transition:.25s;
+
+}
+
+.aboutInfo div:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.aboutFooter{
+
+    margin-top:22px;
+
+    color:#666;
+
+    line-height:1.8;
+
+    font-size:13px;
+
+}
+
+.aboutClose{
+
+    margin-top:24px;
+
+    width:100%;
+
+    border:none;
+
+    border-radius:16px;
+
+    padding:15px;
+
+    background:#0B8F43;
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.aboutClose:hover{
+
+    filter:brightness(1.08);
+
+}
+
+.settingItem:last-child{
+
+    margin-bottom:20px;
+
+}
+
+/* ==========================================
+   ABOUT PANEL DARK MODE
+========================================== */
+
+body.dark #aboutPanel{
+
+    background:#1B212B;
+
+    color:#F5F5F5;
+
+}
+
+body.dark #aboutPanel h2,
+body.dark #aboutPanel h3{
+
+    color:#FFFFFF;
+
+}
+
+body.dark .aboutDesc,
+body.dark .aboutFooter,
+body.dark .aboutMoto{
+
+    color:#D1D5DB;
+
+}
+
+body.dark .aboutInfo div{
+
+    background:#2A323D;
+
+    color:#F5F5F5;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+body.dark #aboutPanel hr{
+
+    background:rgba(255,255,255,.10);
+
+}
+
+body.dark .aboutClose{
+
+    background:#0B8F43;
+
+    color:#FFFFFF;
+
+}
+
+body.dark .aboutClose:hover{
+
+    background:#087438;
+
+}
+
+body.dark .aboutVersion{
+
+    background:#0B8F43;
+
+    color:#FFFFFF;
+
+}
+
+body.dark .aboutLogo{
+
+    filter:brightness(1.1);
+
+}
+
+/* ==========================================
+   FMC DIALOG V13
+========================================== */
+
+.fmcDialog{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.25s;
+
+    z-index:10000;
+
+}
+
+.fmcDialog.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.fmcDialogBox{
+
+    width:90%;
+
+    max-width:360px;
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:22px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+
+    animation:dialogPop .25s ease;
+
+}
+
+.fmcDialogBox h2{
+
+    margin:0 0 12px;
+
+    font-size:22px;
+
+    color:#0B8F43;
+
+    text-align:center;
+
+}
+
+.fmcDialogBox p{
+
+    margin:0;
+
+    color:#555;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+    text-align:center;
+
+}
+
+.dialogButtons{
+
+    display:flex;
+
+    gap:12px;
+
+    margin-top:22px;
+
+}
+
+.dialogButtons button{
+
+    flex:1;
+
+    border:none;
+
+    border-radius:14px;
+
+    padding:14px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+}
+
+.dialogCancel{
+
+    background:#ECEFF1;
+
+    color:#555;
+
+}
+
+.dialogOk{
+
+    background:#0B8F43;
+
+    color:#fff;
+
+}
+
+@keyframes dialogPop{
+
+    from{
+
+        transform:scale(.9);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+/* ======================================
+   DARK MODE DIALOG
+====================================== */
+
+body.dark .fmcDialog{
+
+    background:rgba(0,0,0,.65);
+
+}
+
+body.dark .fmcDialogBox{
+
+    background:#1B212B;
+    color:#F5F5F5;
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:0 20px 45px rgba(0,0,0,.45);
+
+}
+
+body.dark .fmcDialogBox h2{
+
+    color:#FFFFFF;
+
+}
+
+body.dark .fmcDialogBox p{
+
+    color:#C8CDD5;
+
+}
+
+body.dark .dialogOk{
+
+    background:#0B8F43;
+    color:#FFFFFF;
+
+}
+
+body.dark .dialogCancel{
+
+    background:#2A323D;
+    color:#FFFFFF;
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+body.dark .dialogCancel:hover{
+
+    background:#36414F;
+
+}
+
+/* ======================================
+   ABOUT BADGE
+====================================== */
+
+.aboutBadge{
+    display:inline-block;
+    margin-top:10px;
+    margin-bottom:10px;
+    padding:6px 18px;
+    background:#0B8F43;
+    color:#fff;
+    font-size:12px;
+    font-weight:600;
+    border-radius:20px;
+    letter-spacing:.5px;
+    box-shadow:0 4px 12px rgba(11,143,67,.25);
+}
+
+/* ==========================================
+   FMC BROILER MOBILE V11
+   TABLE STYLE
+========================================== */
+
+.tableEkonomi,
+.tableRealisasi{
+
+    width:100%;
+    overflow:hidden;
+    border-radius:18px;
+    margin-top:10px;
+    margin-bottom:18px;
+    background:#ffffff;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+
+}
+
+.tableEkonomi table,
+.tableRealisasi table{
+
+    width:100%;
+    border-collapse:collapse;
+
+}
+
+.tableEkonomi thead,
+.tableRealisasi thead{
+
+    background:#f4f6f9;
+
+}
+
+.tableEkonomi th,
+.tableRealisasi th{
+
+    padding:14px 10px;
+    font-size:13px;
+    font-weight:700;
+    color:#374151;
+    text-align:center;
+    border-bottom:1px solid #e5e7eb;
+
+}
+
+.tableEkonomi td,
+.tableRealisasi td{
+
+    padding:12px 10px;
+    text-align:center;
+    font-size:13px;
+    color:#374151;
+    border-bottom:1px solid #eef2f7;
+
+}
+
+.tableEkonomi tbody tr:nth-child(even),
+.tableRealisasi tbody tr:nth-child(even){
+
+    background:#f9fafb;
+
+}
+
+.tableEkonomi tbody tr:hover,
+.tableRealisasi tbody tr:hover{
+
+    background:#f3f4f6;
+
+}
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+body.dark .tableEkonomi,
+body.dark .tableRealisasi{
+
+    background:#1B2430;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 4px 14px rgba(0,0,0,.18);
+
+}
+
+body.dark .tableEkonomi thead,
+body.dark .tableRealisasi thead{
+
+    background:#263240;
+
+}
+
+body.dark .tableEkonomi th,
+body.dark .tableRealisasi th{
+
+    background:#263240;
+
+    color:#F8FAFC;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+body.dark .tableEkonomi td,
+body.dark .tableRealisasi td{
+
+    background:#1B2430;
+
+    color:#E5E7EB;
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+
+}
+
+body.dark .tableEkonomi tbody tr:nth-child(even) td,
+body.dark .tableRealisasi tbody tr:nth-child(even) td{
+
+    background:#222D3A;
+
+}
+
+body.dark .tableEkonomi tbody tr:hover td,
+body.dark .tableRealisasi tbody tr:hover td{
+
+    background:#2C3A4B;
+
+}
+
+/* ==========================================
+   FMC BROILER MOBILE V11
+   DARK MODE TABLE
+========================================== */
+
+body.dark .tableEkonomi,
+body.dark .tableRealisasi{
+
+    background:#1F2937;
+
+    border:1px solid rgba(24,77,54,.65);
+
+    box-shadow:0 4px 14px rgba(34,197,94,.10);
+
+}
+
+body.dark .tableEkonomi thead,
+body.dark .tableRealisasi thead{
+
+    background:#184D36;
+
+}
+
+body.dark .tableEkonomi th,
+body.dark .tableRealisasi th{
+
+    background:#184D36;
+
+    color:#E8FFF2;
+
+    border-bottom:1px solid rgba(47,125,88,.75);
+
+}
+
+body.dark .tableEkonomi td,
+body.dark .tableRealisasi td{
+
+    background:#1F2937;
+
+    color:#E5E7EB;
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+body.dark .tableEkonomi tbody tr:nth-child(even) td,
+body.dark .tableRealisasi tbody tr:nth-child(even) td{
+
+    background:#263342;
+
+}
+
+body.dark .tableEkonomi tbody tr:hover td,
+body.dark .tableRealisasi tbody tr:hover td{
+
+    background:#234833;
+
+}
+
+/* ==========================================
+   FMC BROILER MOBILE V11
+   SETTING PANEL - DARK MODE
+========================================== */
+
+body.dark #settingPanel{
+
+    background:#1F2937;
+
+    color:#F8FAFC;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+body.dark .settingItem{
+
+    background:#263342;
+
+    color:#F8FAFC;
+
+    border:1px solid rgba(255,255,255,.05);
+
+}
+
+body.dark .settingItem:active{
+
+    background:#234833;
+
+}
+
+body.dark .panelHandle{
+
+    background:#6B7280;
+
+}
+
+body.dark #settingPanel h2{
+
+    color:#6EEB83;
+
+}
+
+body.dark .settingItem .material-symbols-rounded{
+
+    color:#6EEB83;
+
+}
+
+body.dark .settingItem small{
+
+    color:#B8C2CC;
+
+}
+
+body.dark.setting-open::before{
+
+    background:rgba(0,0,0,.45);
+
+    backdrop-filter:blur(3px);
+
+    -webkit-backdrop-filter:blur(3px);
+
+}
+
+@media (max-width:480px){
+
+    #app{
+
+        padding:6px;
+
+        max-width:100%;
+
+    }
+
+    .gridCard{
+
+        gap:8px;
+
+    }
+
+    .card,
+    .gridCard > div{
+
+        padding:10px;
+
+        border-radius:12px;
+
+    }
+
+    .dashboardHero{
+
+        padding:12px;
+
+        margin-bottom:10px;
+
+        border-radius:14px;
+
+    }
+
+}
+
+/* ==========================================
+   FMC DESKTOP ENGINE V14
+========================================== */
+
+body.desktop{
+
+    background:#EEF3F1;
+
+    overflow-x:hidden;
+
+}
+
+body.desktop main{
+
+    width:100%;
+
+    max-width:1800px;
+
+    margin:24px auto;
+
+    padding:0 28px 100px;
+
+    box-sizing:border-box;
+
+}
+
+body.desktop #dashboardPage,
+body.desktop #harianPage,
+body.desktop #keuanganPage,
+body.desktop #rhppPage,
+body.desktop #settingPage{
+
+    width:100%;
+
+    max-width:100%;
+
+}
+
+body.desktop .dashboardHero,
+body.desktop .card,
+body.desktop .weatherCard{
+
+    width:100%;
+
+    box-sizing:border-box;
+
+}
+
+body.desktop .gridCard{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:20px;
+
+}
+
+body.desktop table{
+
+    width:100%;
+
+}
+/* ==========================================
+   DESKTOP DARK MODE
+========================================== */
+
+body.dark.desktop{
+
+    background:#12181F;
+
+}
+
+body.dark.desktop main{
+
+    background:transparent;
+
+}
+
+body.dark.desktop .dashboardHero{
+
+    background:
+    linear-gradient(
+        135deg,
+        #0A5C31,
+        #0B8F43
+    );
+
+    box-shadow:
+        0 8px 24px rgba(0,0,0,.30);
+
+}
+
+body.dark.desktop .card,
+body.dark.desktop .weatherCard{
+
+    background:#1F2937;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,.22);
+
+}
+
+body.dark.desktop .gridCard .card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 10px 26px rgba(0,0,0,.32);
+
+}
+
+body.dark.desktop h1,
+body.dark.desktop h2,
+body.dark.desktop h3,
+body.dark.desktop b{
+
+    color:#F8FAFC;
+
+}
+
+body.dark.desktop p,
+body.dark.desktop small,
+body.dark.desktop span{
+
+    color:#CBD5E1;
+
+}
+
+/* ==========================================
+   FMC FLOK CHICKEN ICON
+========================================== */
+
+.fmc-flok-icon{
+    width:26px;
+    height:26px;
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    flex:0 0 26px;
+}
+
+.fmc-flok-icon svg{
+    width:26px;
+    height:26px;
+
+    display:block;
+
+    fill:currentColor;
+}
+/* ==========================================
+   MASTER KONTRAK ICON
+========================================== */
+
+.contractIcon{
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+}
+/* ==========================================
+   FMC CORN EMOJI ICON
+========================================== */
+
+.fmc-corn-emoji{
+    width:26px;
+    height:26px;
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    flex:0 0 26px;
+
+    font-size:23px;
+    line-height:1;
+
+    /* Ubah emoji berwarna menjadi putih */
+    filter:
+        grayscale(1)
+        brightness(0)
+        invert(1);
+
+    /* Membuat rendering lebih lembut */
+    -webkit-font-smoothing:antialiased;
+    text-rendering:geometricPrecision;
+}
+
+/* ==========================================
+   MATERIAL SYMBOLS - STABIL
+   ========================================== */
+
+.material-symbols-rounded{
+    font-family:'Material Symbols Rounded';
+    font-weight:normal;
+    font-style:normal;
+    font-size:24px;
+    line-height:1;
+    letter-spacing:normal;
+    text-transform:none;
+    display:inline-block;
+    white-space:nowrap;
+    word-wrap:normal;
+    direction:ltr;
+    -webkit-font-feature-settings:'liga';
+    -webkit-font-smoothing:antialiased;
+    font-feature-settings:'liga';
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 500,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
+/* ==========================================================
+   FMC APK — APP VIEWPORT SAFE AREA FIX
+   Header/navigation tetap baseline.
+   Hanya menyelaraskan area konten dengan safe-area.
+========================================================== */
+
+@media (max-width: 480px){
+
+    body:not(.desktop) #app{
+        top:calc(68px + var(--fmc-safe-top, 0px));
+        bottom:calc(72px + var(--fmc-safe-bottom, 0px));
+
+        left:var(--fmc-safe-left, 0px);
+        right:var(--fmc-safe-right, 0px);
+
+        box-sizing:border-box;
+        overflow-y:auto;
+        overflow-x:hidden;
+
+        padding:6px;
+        padding-left:calc(6px + var(--fmc-safe-left, 0px));
+        padding-right:calc(6px + var(--fmc-safe-right, 0px));
+        padding-bottom:calc(6px + var(--fmc-safe-bottom, 0px));
+    }
+
+}

@@ -1,0 +1,672 @@
+/* ==========================================
+   FMC CARD V11
+========================================== */
+
+.card{
+
+    background:var(--card);
+
+    width:calc(100% - 16px);
+
+    margin:0 auto;
+
+    border-radius:14px;
+
+    box-shadow:
+    0 6px 16px rgba(0,0,0,.06);
+
+    padding:12px;
+
+    transition:.25s;
+
+    border:1px solid rgba(0,0,0,.04);
+
+}
+
+.card:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 10px 22px rgba(0,0,0,.10);
+
+}
+
+/* ==========================================
+   KPI GLASS CARD V14
+========================================== */
+
+.kpiGlass{
+
+    background:rgba(11,143,67,.05);
+
+    border:1px solid rgba(11,143,67,.12);
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+    border-radius:18px;
+
+    box-shadow:
+        0 8px 22px rgba(11,143,67,.08);
+
+    transition:.25s;
+
+}
+
+.kpiGlass:hover{
+
+    background:rgba(11,143,67,.08);
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 14px 28px rgba(11,143,67,.12);
+
+}
+
+/* ===========================
+   TITLE
+=========================== */
+
+.card h2{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin:0 0 10px;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    color:var(--text);
+
+}
+
+.card h3{
+
+    margin:0 0 8px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    color:var(--text);
+
+}
+
+.card h4{
+
+    margin:8px 0 4px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    color:var(--text-soft);
+
+}
+
+.card p{
+
+    margin:0;
+
+    font-size:13px;
+
+    color:var(--text-soft);
+
+    line-height:1.5;
+
+}
+
+
+/* ===========================
+   KPI CARD
+=========================== */
+
+.kpiIcon{
+
+    width:34px;
+
+    height:34px;
+
+    border-radius:10px;
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-light)
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    box-shadow:
+    0 5px 12px rgba(11,143,67,.22);
+
+}
+
+.kpiIcon .material-symbols-rounded{
+
+    font-size:18px;
+
+}
+
+.card b{
+
+    display:block;
+
+    margin-top:3px;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:var(--text);
+
+}
+
+
+/* ===========================
+   FARM CARD
+=========================== */
+
+.farmCard{
+
+    background:
+    linear-gradient(
+        135deg,
+        #0B8F43,
+        #18B85B
+    );
+
+    color:#fff;
+
+    padding:10px;
+
+}
+
+.farmHeader{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:8px;
+
+}
+
+.farmHeader h2{
+
+    color:var(--text);
+
+    margin:0;
+
+    font-size:17px;
+
+    line-height:1.2;
+
+}
+
+.farmCard .farmHeader h2{
+    color:#fff;
+}
+
+.farmHeader small{
+
+    display:block;
+
+    margin-top:3px;
+
+    color:var(--text-soft);
+
+    font-size:12px;
+
+    font-weight:500;
+
+}
+
+.farmCard .farmHeader small{
+    color:rgba(255,255,255,.9);
+}
+
+.onlineBadge{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:5px;
+
+    padding:5px 10px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.15);
+
+    color:#fff;
+
+    font-size:10px;
+
+    font-weight:600;
+
+}
+
+.onlineBadge .material-symbols-rounded{
+
+    font-size:14px;
+
+}
+
+.farmInfo{
+
+    margin-top:10px;
+
+    padding-top:10px;
+
+    border-top:1px solid rgba(255,255,255,.25);
+
+    color:#fff;
+
+    font-size:12px;
+
+}
+
+.farmInfo b{
+
+    display:inline;
+
+    color:#fff;
+
+    font-size:14px;
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.dashboardHero{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:8px;
+
+    padding:16px;
+
+    border-radius:16px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #087438,
+        #18B85B
+    );
+
+    color:#fff;
+
+    box-shadow:
+    0 6px 16px rgba(11,143,67,.20);
+
+}
+
+.dashboardHero h1{
+
+    margin:2px 0;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+}
+
+.heroSmall{
+
+    font-size:11px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    opacity:.82;
+
+}
+
+.heroDate{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    margin-top:6px;
+
+    font-size:13px;
+
+    opacity:.95;
+
+}
+
+.heroActions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+.heroShareBtn{
+
+    width:36px;
+
+    height:36px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:rgba(255,255,255,.18);
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    backdrop-filter:blur(6px);
+
+}
+
+.heroShareBtn:hover{
+
+    background:rgba(255,255,255,.26);
+
+}
+
+.heroShareBtn .material-symbols-rounded{
+
+    font-size:17px;
+
+}
+
+.heroLogo{
+
+    width:40px;
+
+    height:40px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.15);
+
+}
+
+.heroLogo .material-symbols-rounded{
+
+    font-size:24px;
+
+    color:#fff;
+
+}
+
+/* ==========================================
+   EKONOMI FLOK
+========================================== */
+
+.ekonomiCard{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:10px;
+
+    margin-top:12px;
+
+}
+
+.ekonomiItem{
+
+    background:#F8FAFC;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:12px;
+
+    padding:8px;
+
+    transition:.25s;
+
+}
+
+.ekonomiItem:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 4px 12px rgba(0,0,0,.06);
+
+}
+
+.ekonomiLabel{
+
+    font-size:11px;
+
+    color:#6B7280;
+
+    margin-bottom:3px;
+
+}
+
+.ekonomiValue{
+
+    font-size:14px;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+
+.ekonomiHeader{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    margin-bottom:8px;
+
+}
+
+.ekonomiHeader .material-symbols-rounded{
+
+    font-size:18px;
+
+    color:#16A34A;
+
+}
+
+/* ==========================================
+   FMC PREMIUM KPI V14
+========================================== */
+
+body.desktop .gridCard .card{
+
+    background:rgba(255,255,255,.78);
+
+    backdrop-filter:blur(14px);
+
+    -webkit-backdrop-filter:blur(14px);
+
+    border:1px solid rgba(255,255,255,.55);
+
+    border-radius:18px;
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,.08);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+body.desktop .gridCard .card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.12);
+
+}
+
+/* ==========================================
+   HARIAN CARD V12
+========================================== */
+
+.harianGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:8px;
+
+    margin-top:8px;
+
+}
+
+.harianItem{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:4px 2px;
+
+}
+
+.harianItem .kpiIcon{
+
+    width:30px;
+
+    height:30px;
+
+    margin-bottom:6px;
+
+}
+
+.harianItem .kpiIcon .material-symbols-rounded{
+
+    font-size:16px;
+
+}
+
+.harianItem h4{
+
+    margin:2px 0 2px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.harianItem b{
+
+    margin-top:2px;
+
+    font-size:17px;
+
+    font-weight:700;
+
+}
+
+/* ==========================================
+   HARIAN HEADER V13
+========================================== */
+
+.harianHeader{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    margin-bottom:10px;
+
+}
+
+.harianTitle h2{
+
+    margin:0;
+
+    font-size:17px;
+
+    font-weight:700;
+
+}
+
+.harianTitle small{
+
+    display:block;
+
+    margin-top:2px;
+
+    font-size:13px;
+
+    color:var(--text-soft);
+
+    font-weight:500;
+
+}
+
+body.dark .harianTitle small{
+
+    color:#D1D5DB;
+
+}

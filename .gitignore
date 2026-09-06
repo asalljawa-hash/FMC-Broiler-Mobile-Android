@@ -1,0 +1,18 @@
+node_modules/
+android/.gradle/
+android/build/
+android/app/build/
+android/.idea/
+.idea/
+*.iml
+
+# Backup CSS sementara
+www/css/*.backup-*
+www/css/*.before-*
+www/css/*.pre-baseline-*
+
+# APK hasil build
+*.apk
+
+# Backup eksperimen lokal
+backup-*/

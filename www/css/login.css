@@ -1,0 +1,986 @@
+/* ======================================
+   FMC LOGIN PREMIUM V21
+====================================== */
+
+#loginPage{
+
+    min-height:100dvh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px 20px;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    -webkit-overflow-scrolling:touch;
+
+    background:
+        radial-gradient(circle at top left,#32d56d 0%,transparent 35%),
+        radial-gradient(circle at bottom right,#58e89a 0%,transparent 35%),
+        linear-gradient(135deg,#0B8F43,#16a34a);
+
+}
+
+/* =========================
+   LOGIN CARD
+========================= */
+
+.loginContainer{
+
+    width:100%;
+
+    max-width:420px;
+
+    margin:24px auto;
+
+    padding:40px 30px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(28px);
+    -webkit-backdrop-filter:blur(28px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.18),
+        inset 0 1px 0 rgba(255,255,255,.30);
+
+    text-align:center;
+
+    box-sizing:border-box;
+
+}
+
+/* =========================
+   LOGIN LOGO PREMIUM
+========================= */
+
+.loginLogo{
+
+    width:128px;
+
+    height:auto;
+
+    display:block;
+
+    margin:0 auto 26px;
+
+    filter:drop-shadow(0 15px 28px rgba(0,0,0,.22));
+
+    transition:.35s;
+
+}
+
+.loginLogo:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* =========================
+   LOGIN TITLE PREMIUM
+========================= */
+
+.loginContainer h1{
+
+    margin:0;
+
+    text-align:center;
+
+    font-family:"Inter",sans-serif;
+
+    font-size:44px;
+
+    font-weight:800;
+
+    line-height:1;
+
+    letter-spacing:.4px;
+
+    color:#FFFFFF;
+
+    text-shadow:0 4px 14px rgba(0,0,0,.16);
+
+}
+
+/* =========================
+   LOGIN SUBTITLE
+========================= */
+
+.loginSub{
+
+    margin:12px 0 26px;
+
+    text-align:center;
+
+    font-size:18px;
+
+    font-weight:500;
+
+    line-height:1.45;
+
+    color:rgba(255,255,255,.82);
+
+}
+
+/* =========================
+   REGISTER
+========================= */
+
+.registerBox{
+
+    margin-top:28px;
+
+    text-align:center;
+
+    font-size:15px;
+
+    color:rgba(17,24,39,.78);
+
+}
+
+.registerBox a{
+
+    color:#0B8F43;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+}
+
+.registerBox a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* =========================
+   VERSION
+========================= */
+
+.loginVersion{
+
+    margin-top:18px;
+
+    margin-bottom:4px;
+
+    text-align:center;
+
+    font-size:13px;
+
+    color:rgba(255,255,255,.72);
+
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.loginLogo{
+
+    width:110px;
+
+    height:auto;
+
+    margin:auto;
+
+    margin-bottom:20px;
+
+    display:block;
+
+    filter:
+    drop-shadow(0 10px 20px rgba(0,0,0,.18));
+
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.loginContainer h1{
+
+    margin:0;
+
+    font-size:40px;
+
+    font-weight:800;
+
+    color:#111827;
+
+    letter-spacing:.5px;
+
+}
+
+.loginSub{
+
+    margin-top:8px;
+
+    color:#6B7280;
+
+    font-size:16px;
+
+    margin-bottom:18px;
+
+}
+
+/* =========================
+   SERVER STATUS PREMIUM
+========================= */
+
+.serverStatus{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    width:max-content;
+
+    margin:24px auto;
+
+    padding:10px 20px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.16);
+
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.10),
+        inset 0 1px 0 rgba(255,255,255,.25);
+
+    color:#374151;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:.2px;
+
+    transition:.3s;
+
+}
+
+/* Icon Material */
+
+.serverStatus .material-symbols-rounded{
+
+    font-size:20px;
+
+    color:#16A34A;
+
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 500,
+        'GRAD' 0,
+        'opsz' 24;
+
+}
+
+/* Status Text */
+
+.statusText{
+
+    width:170px;
+
+    overflow:hidden;
+
+    white-space:nowrap;
+
+}
+
+.statusText span{
+
+    display:inline-block;
+
+    padding-left:100%;
+
+    animation:statusScroll 8s linear infinite;
+
+}
+
+@keyframes statusScroll{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(-100%);
+
+    }
+
+}
+
+/* =========================
+   STATUS DOT
+========================= */
+
+.dot{
+
+    width:7px;
+
+    height:7px;
+
+    border-radius:50%;
+
+    background:#FACC15;
+
+    box-shadow:
+        0 0 10px #FACC15;
+
+    animation:statusPulse 1.5s infinite;
+
+}
+
+/* =========================
+   STATUS WARNA
+========================= */
+
+.serverStatus.checking .dot{
+
+    background:#FACC15;
+
+    box-shadow:0 0 12px #FACC15;
+
+}
+
+.serverStatus.online .dot{
+
+    background:#22C55E;
+
+    box-shadow:0 0 14px #22C55E;
+
+}
+
+.serverStatus.loading .dot{
+
+    background:#3B82F6;
+
+    box-shadow:0 0 14px #3B82F6;
+
+}
+
+.serverStatus.sync .dot{
+
+    background:#A855F7;
+
+    box-shadow:0 0 14px #A855F7;
+
+}
+
+.serverStatus.error .dot{
+
+    background:#EF4444;
+
+    box-shadow:0 0 14px #EF4444;
+
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes statusPulse{
+
+    0%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:scale(1.45);
+
+        opacity:.45;
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+/* =========================
+   LABEL
+========================= */
+
+#loginPage label{
+
+    display:block;
+
+    text-align:left;
+
+    margin-top:18px;
+
+    margin-bottom:8px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#374151;
+
+}
+
+/* =========================
+   INPUT
+========================= */
+
+#loginPage input{
+
+    width:100%;
+
+    padding:17px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#F5F7FA;
+
+    font-size:16px;
+
+    outline:none;
+
+    box-sizing:border-box;
+
+    transition:.25s;
+
+}
+
+#loginPage input:focus{
+
+    background:#ffffff;
+
+    box-shadow:
+    0 0 0 3px rgba(11,143,67,.15);
+
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.loginBtn{
+
+    width:100%;
+
+    margin-top:28px;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#0B8F43;
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.loginBtn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 12px 30px rgba(11,143,67,.35);
+
+}
+
+.loginBtn:active{
+
+    transform:scale(.98);
+
+}
+
+/* =========================
+   REGISTER
+========================= */
+
+.registerBox{
+
+    margin-top:30px;
+
+    text-align:center;
+
+    font-size:15px;
+
+    color:rgba(17,24,39,.70);
+
+}
+
+.registerBox a{
+
+    color:#0B8F43;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+}
+
+.loginVersion{
+
+    margin-top:18px;
+
+    margin-bottom:0;
+
+    text-align:center;
+
+    font-size:13px;
+
+    color:rgba(255,255,255,.65);
+
+}
+
+/* =========================
+   VERSION
+========================= */
+
+.loginVersion{
+
+    margin-top:28px;
+
+    color:#9CA3AF;
+
+    font-size:13px;
+
+}
+
+/* =========================
+   LOGIN MESSAGE PREMIUM
+========================= */
+
+.loginMessage{
+
+    display:none;
+
+    margin:16px 0 10px;
+
+    padding:15px 18px;
+
+    border-radius:14px;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    font-family:"Segoe UI",Roboto,sans-serif;
+
+    text-align:left;
+
+    line-height:1.45;
+
+    letter-spacing:.15px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    animation:loginMessageShow .25s ease;
+
+    box-shadow:
+    0 6px 16px rgba(0,0,0,.08);
+
+}
+
+/* SUCCESS */
+
+.loginMessage.success{
+
+    color:#166534;
+
+    background:#F0FDF4;
+
+    border:1px solid #BBF7D0;
+
+}
+
+.loginMessage.success::before{
+
+    content:"✓";
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#16A34A;
+
+}
+
+/* ERROR */
+
+.loginMessage.error{
+
+    color:#991B1B;
+
+    background:#FEF2F2;
+
+    border:1px solid #FECACA;
+
+}
+
+.loginMessage.error::before{
+
+    content:"!";
+
+    width:22px;
+
+    height:22px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:#DC2626;
+
+    color:#fff;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    flex-shrink:0;
+
+}
+
+/* WARNING */
+
+.loginMessage.warning{
+
+    color:#92400E;
+
+    background:#FFFBEB;
+
+    border:1px solid #FDE68A;
+
+}
+
+.loginMessage.warning::before{
+
+    content:"!";
+
+    width:22px;
+
+    height:22px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:#F59E0B;
+
+    color:#fff;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    flex-shrink:0;
+
+}
+
+@keyframes loginMessageShow{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(8px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* ======================================
+   LOGIN RESPONSIVE ENGINE V22
+====================================== */
+
+/* =========================
+   HP Tinggi ≤ 760px
+========================= */
+
+@media (max-height:760px){
+
+    #loginPage{
+
+        align-items:flex-start;
+
+        padding:20px;
+
+    }
+
+    .loginContainer{
+
+        max-width:400px;
+
+        margin:18px auto;
+
+        padding:28px 22px;
+
+        border-radius:24px;
+
+    }
+
+    .loginLogo{
+
+        width:90px;
+
+        margin-bottom:16px;
+
+    }
+
+    .loginContainer h1{
+
+        font-size:32px;
+
+    }
+
+    .loginSub{
+
+        font-size:14px;
+
+        margin-top:6px;
+
+        margin-bottom:16px;
+
+    }
+
+    .serverStatus{
+
+        margin:18px auto;
+
+        padding:9px 18px;
+
+        font-size:13px;
+
+    }
+
+    #loginPage label{
+
+        margin-top:14px;
+
+        margin-bottom:6px;
+
+        font-size:13px;
+
+    }
+
+    #loginPage input{
+
+        padding:14px;
+
+        border-radius:15px;
+
+        font-size:16px;
+
+    }
+
+    .loginBtn{
+
+        margin-top:22px;
+
+        padding:15px;
+
+        border-radius:16px;
+
+        font-size:16px;
+
+    }
+
+    .registerBox{
+
+        margin-top:18px;
+
+        font-size:14px;
+
+    }
+
+    .loginVersion{
+
+        margin-top:16px;
+
+        font-size:12px;
+
+    }
+
+}
+
+/* =========================
+   HP Tinggi ≤ 700px
+========================= */
+
+@media (max-height:700px){
+
+    .loginContainer{
+
+        padding:24px 20px;
+
+    }
+
+    .loginLogo{
+
+        width:82px;
+
+    }
+
+    .loginContainer h1{
+
+        font-size:30px;
+
+    }
+
+    .loginSub{
+
+        font-size:13px;
+
+    }
+
+    .serverStatus{
+
+        margin:14px auto;
+
+        padding:8px 16px;
+
+        font-size:12px;
+
+    }
+
+}
+
+/* =========================
+   HP Sangat Pendek ≤ 650px
+========================= */
+
+@media (max-height:650px){
+
+    .loginContainer{
+
+        padding:20px 18px;
+
+    }
+
+    .loginLogo{
+
+        width:72px;
+
+    }
+
+    .loginContainer h1{
+
+        font-size:26px;
+
+    }
+
+    .loginSub{
+
+        font-size:12px;
+
+        margin-bottom:12px;
+
+    }
+
+    .serverStatus{
+
+        margin:12px auto;
+
+        padding:8px 14px;
+
+        font-size:11px;
+
+    }
+
+    #loginPage input{
+
+        padding:12px;
+
+    }
+
+    .loginBtn{
+
+        padding:14px;
+
+        font-size:15px;
+
+    }
+
+    .registerBox{
+
+        margin-top:16px;
+
+        font-size:13px;
+
+    }
+
+    .loginVersion{
+
+        margin-top:14px;
+
+        font-size:11px;
+
+    }
+
+}
